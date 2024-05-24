@@ -13,9 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainMenu extends AppCompatActivity {
-    private Button Button1;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,10 +26,10 @@ public class MainMenu extends AppCompatActivity {
         });
 
         // Найдем кнопку по ее id
-        Button1 = findViewById(R.id.MainMenu_button1);
+        Button button1 = findViewById(R.id.MainMenu_button1);
 
         // Установим обработчик нажатия на кнопку
-        Button1.setOnClickListener(new View.OnClickListener() {
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Создаем Intent для перехода на Activity Theory1
