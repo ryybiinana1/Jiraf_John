@@ -22,10 +22,10 @@ public class MainActivity1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        No_password = findViewById(R.id.no_password);
-        User_name = findViewById(R.id.user_name);
-        Password = findViewById(R.id.password);
-        Button_autorizaton = findViewById(R.id.button_autorizaton);
+        No_password = findViewById(R.id.no_password_main);
+        User_name = findViewById(R.id.user_name_main);
+        Password = findViewById(R.id.password_main);
+        Button_autorizaton = findViewById(R.id.button_autorizaton_main);
 
         InternalStorage storage = new InternalStorage();
 
@@ -39,6 +39,8 @@ public class MainActivity1 extends AppCompatActivity {
                 boolean isLoggedIn = storage.loginUser(username, password);
                 if (isLoggedIn) {
                     System.out.println("Login successful!");
+                    intent = new Intent(MainActivity1.this, MainMenu.class);
+                    startActivity(intent);
                 } else {
                     System.out.println("Invalid username or password.");
                 }

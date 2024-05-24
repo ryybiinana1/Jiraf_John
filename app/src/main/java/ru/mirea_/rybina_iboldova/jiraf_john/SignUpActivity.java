@@ -1,5 +1,6 @@
 package ru.mirea_.rybina_iboldova.jiraf_john;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,14 +19,15 @@ public class SignUpActivity extends AppCompatActivity {
     private ConstraintLayout Button_autorizaton;
 
 
+    @SuppressLint("CutPasteId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        No_password1 = findViewById(R.id.no_password1);
-        User_name = findViewById(R.id.user_name);
-        Password = findViewById(R.id.password);
+        No_password1 = findViewById(R.id.password_sign_up);
+        User_name = findViewById(R.id.user_name_sign_up);
+        Password = findViewById(R.id.password_sign_up);
         No_password1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,8 +37,6 @@ public class SignUpActivity extends AppCompatActivity {
 
             }
         });
-        User_name = findViewById(R.id.user_name);
-        Password = findViewById(R.id.password);
         Button_autorizaton = findViewById(R.id.button_autorizaton);
 
 
