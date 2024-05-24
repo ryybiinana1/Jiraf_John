@@ -7,52 +7,88 @@
     android:layout_height="match_parent"
     tools:context=".Theory1">
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        tools:ignore="MissingConstraints">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="379dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#ffd700"
+        android:text="Practice according to Unit 1"
+        android:textColor="#4C4C4C"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="141dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:text="2/5"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="304dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="84dp"
+        android:text="Заполни пропуски"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="297dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="60dp"
+        android:text="Where _ you at that day?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="281dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="228dp"
+        android:backgroundTint="#9C9C9C"
+        android:text="К следующему вопросу"
+        android:textColor="#4C4C4C"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="279dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Введи слово"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
-
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
-            android:backgroundTint="#ffd700"
-            android:text="Theory according of Unit 1"
-            android:textColor="#4C4C4C"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Relationship between people"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-
-
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="277dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#9C9C9C"
-            android:text="Let's go"
-            android:textColor="#4C4C4C"
-            android:layout_gravity="center" />
-
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

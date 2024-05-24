@@ -6,4 +6,121 @@
     android:layout_height="match_parent"
     tools:context=".UNIT1_1">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="297dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="40dp"
+        android:text="Where _ you at that day?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="281dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#9C9C9C"
+        android:text="К следующему вопросу"
+        android:textColor="#4C4C4C"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="281dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#DFD9D9"
+        android:text="are"
+        android:textColor="#8E8B8B"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="281dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="#DFD9D9"
+        android:text="are"
+        android:textColor="#8E8B8B"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="281dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="176dp"
+        android:backgroundTint="#DFD9D9"
+        android:text="are"
+        android:textColor="#8E8B8B"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="141dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:text="1/5"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="304dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="84dp"
+        android:text="Выбери правильный ответ"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="379dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#ffd700"
+        android:text="Practice according to Unit 1"
+        android:textColor="#4C4C4C"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

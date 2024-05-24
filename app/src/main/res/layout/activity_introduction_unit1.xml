@@ -12,9 +12,15 @@
         android:id="@+id/imageButton"
         android:layout_width="20dp"
         android:layout_height="30dp"
-        android:scaleType="fitCenter"
         android:background="@android:color/transparent"
-        android:src="@drawable/obratno_strelka" />
+        android:scaleType="fitCenter"
+        android:src="@drawable/obratno_strelka"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009" />
 
     <TextView
         android:id="@+id/Let_start_i"
@@ -22,12 +28,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:text="Let's start!"
-        app:layout_constraintBottom_toTopOf="@+id/button_i"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/UNIT1_practice_i"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintVertical_bias="0.666" />
 
     <TextView
         android:id="@+id/UNIT1_practice_i"
@@ -35,7 +43,8 @@
         android:layout_height="158dp"
         android:layout_marginBottom="40dp"
         android:text="Practice according to UNIT 1"
-        android:textSize="32sp"
+        android:textSize="42sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button_i"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -50,7 +59,7 @@
         android:textColor="#4C4C4C"
         android:textColorHighlight="#4C4C4C"
         android:textColorLink="#4C4C4C"
-        android:textSize="20sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
