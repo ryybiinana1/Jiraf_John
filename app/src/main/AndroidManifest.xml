@@ -18,9 +18,6 @@
             android:name=".MainActivity1"
             android:exported="false" />
         <activity
-            android:name=".UNIT1_3_test"
-            android:exported="false" />
-        <activity
             android:name=".UNIT1_22"
             android:exported="false" />
         <activity
