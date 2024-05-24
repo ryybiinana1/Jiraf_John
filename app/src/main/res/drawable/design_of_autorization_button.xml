@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<intent xmlns:android="http://schemas.android.com/apk/res/android">
+<inset xmlns:android="http://schemas.android.com/apk/res/android">
     <ripple android:color="@color/design_default_color_background">
         <item>
             <shape android:shape="rectangle"
-                android:tint="#DAD6D6">
+                android:tint="#9C9C9C">
                 <corners android:radius="100dp">
                 </corners>
             </shape>
 
         </item>
     </ripple>
-</intent>
+</inset>
