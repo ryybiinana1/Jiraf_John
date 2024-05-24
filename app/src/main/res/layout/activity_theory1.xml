@@ -7,80 +7,90 @@
     android:layout_height="match_parent"
     tools:context=".Theory1">
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        tools:ignore="MissingConstraints">
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="24dp"
+        android:layout_height="30dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/obratno_strelka"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
 
-        <Button
-            android:id="@+id/MainMenu_button1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#ffd700"
-            android:text="Theory according to Unit 1"
-            android:textColor="#4C4C4C"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#ffd700"
+        android:text="Theory according to Unit 1"
+        android:textColor="#4C4C4C"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relationship between people"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="400dp"
+        android:layout_height="261dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/people" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="393dp"
+        android:layout_height="253dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <TextView
-            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Relationship between people"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView"
-            android:adjustViewBounds="true"
-            app:srcCompat="@drawable/people" />
-
-        <ScrollView
-            android:id="@+id/scrollView"
-            android:layout_width="match_parent"
-            android:layout_height="235dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageView">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="  I’ve read an interesting proverb today, A good friend is like a four–leaf clover, hard to find and lucky to have. I wondered “What is friendship in fact?” So let’s find out! Friendship is a special kind of relationships between people. People need it because they expect help and comfort from each other. Those who have friends have less stress
-            and live longer. But, only time can show \n
-    Friendship is usually based on common interests and mutual
-            understanding, true encouragement and sympathy. Usually people meet, get acquainted,
-            communicate and as a result become friends \n
-        I have many good friends, but two of them are the best. Their names are Annie and Natalie. They make my life brighter and more interesting. When I’m bored, I can always call my them and ask to come over and have a party. Once a month we go to the cinema or to the theatre, we call it “trinity time”. I consider them to be a part of my family.
+            android:text="  I’ve read an interesting proverb today, A good friend is like a four–leaf clover, hard to find and lucky to have. I wondered “What is friendship in fact?” So let’s find out! Friendship is a special kind of relationships between people. People need it because they expect help and comfort from each other. Those who have friends have less stress
+        and live longer. But, only time can show \n
+Friendship is usually based on common interests and mutual
+        understanding, true encouragement and sympathy. Usually people meet, get acquainted,
+        communicate and as a result become friends \n
+    I have many good friends, but two of them are the best. Their names are Annie and Natalie. They make my life brighter and more interesting. When I’m bored, I can always call my them and ask to come over and have a party. Once a month we go to the cinema or to the theatre, we call it “trinity time”. I consider them to be a part of my family.
 " />
 
-        </ScrollView>
+    </ScrollView>
 
-        <Button
-            android:id="@+id/button2_theory1"
-            android:layout_width="277dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#9C9C9C"
-            android:text="Let's go"
-            android:textColor="#4C4C4C"
-            android:layout_gravity="center" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#9C9C9C"
+        android:text="Let's go"
+        android:textColor="#4C4C4C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
