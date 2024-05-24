@@ -16,6 +16,12 @@
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
+            android:name=".theory2"
+            android:exported="false" />
+        <activity
+            android:name=".Theory1"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity1"
             android:exported="true">
             <intent-filter>
