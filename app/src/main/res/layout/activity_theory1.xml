@@ -81,7 +81,7 @@ Friendship is usually based on common interests and mutual
     </ScrollView>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button2_theory1"
         android:layout_width="277dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
