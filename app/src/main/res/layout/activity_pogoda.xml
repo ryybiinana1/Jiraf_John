@@ -20,7 +20,8 @@
             android:layout_height="187dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:src='@{isTrue ? @drawable/image_true : @drawable/image_false}'
+            android:contentDescription="@string/todoS"
+            android:src='@drawable/sunduk'
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
