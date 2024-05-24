@@ -16,13 +16,10 @@
             android:name=".UNIT1_5"
             android:exported="false" />
         <activity
-            android:name=".MainActivity1"
+            android:name=".UNIT1_3_test"
             android:exported="false" />
         <activity
             android:name=".UNIT1_22"
-            android:exported="false" />
-        <activity
-            android:name=".Pogoda"
             android:exported="false" />
         <activity
             android:name=".UNIT1_1"
@@ -40,7 +37,7 @@
             android:name=".Theory1"
             android:exported="false" />
         <activity
-            android:name=".UNIT1_3_test"
+            android:name=".MainActivity1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

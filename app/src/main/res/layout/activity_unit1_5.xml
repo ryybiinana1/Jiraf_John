@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".UNIT1_5">
 
+    <Button
+        android:id="@+id/button1_unit1_5"
+        android:layout_width="379dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#ffd700"
+        android:text="Practice according to Unit 1"
+        android:textColor="#4C4C4C"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

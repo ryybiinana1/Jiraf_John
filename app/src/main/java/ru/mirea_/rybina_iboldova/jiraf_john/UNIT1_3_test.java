@@ -26,6 +26,7 @@ import java.util.List;
 public class UNIT1_3_test extends AppCompatActivity {
     private Drawing_View lineView;
     private Button checkButton;
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
