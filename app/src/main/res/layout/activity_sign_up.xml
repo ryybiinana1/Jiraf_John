@@ -23,7 +23,7 @@
     </androidx.cardview.widget.CardView>
 
     <EditText
-        android:id="@+id/user_name"
+        android:id="@+id/user_name_sign_up"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginStart="60dp"
@@ -44,7 +44,7 @@
         app:layout_constraintVertical_bias="0.282" />
 
     <TextView
-        android:id="@+id/autorization"
+        android:id="@+id/registration_sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -62,7 +62,7 @@
         app:layout_constraintVertical_bias="0.144" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/password_sign_up"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginStart="60dp"
@@ -81,35 +81,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.363" />
 
-    <TextView
-        android:id="@+id/no_password1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="10dp"
-        android:text="Войти с учетной записью"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_autorizaton"
-        app:layout_constraintVertical_bias="0.011" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/button_autorizaton"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="60dp"
         android:background="@drawable/design_of_autorization_button"
-        android:ems="10">
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_sign_up">
 
         <TextView
+            android:id="@+id/button_registration"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -122,4 +108,15 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/back_to_main_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Войти с учетной записью"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_autorizaton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
