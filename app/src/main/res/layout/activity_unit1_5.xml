@@ -21,4 +21,85 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView1_unit1_5"
+        android:layout_width="141dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:text="5/5"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1_unit1_5" />
+
+    <TextView
+        android:id="@+id/textView2_unit1_5"
+        android:layout_width="304dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="84dp"
+        android:text="Произнесите слово"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1_unit1_5"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/textView3_unit1_1"
+        android:layout_width="297dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="40dp"
+        android:text="Beauty"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2_unit1_5"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button2_unit1_1"
+        android:layout_width="281dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="#9C9C9C"
+        android:text="К следующему вопросу"
+        android:textColor="#4C4C4C"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/image_start"
+        android:layout_width="45dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="336dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/play" />
+
+    <EditText
+        android:id="@+id/editText_unit1_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="176dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/button2_unit1_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

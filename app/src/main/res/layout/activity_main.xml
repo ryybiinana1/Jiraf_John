@@ -25,7 +25,7 @@
     </androidx.cardview.widget.CardView>
 
     <EditText
-        android:id="@+id/user_name"
+        android:id="@+id/user_name_main"
         android:layout_width="290dp"
         android:layout_height="48dp"
         android:layout_marginStart="60dp"
@@ -46,7 +46,7 @@
         app:layout_constraintVertical_bias="0.273" />
 
     <TextView
-        android:id="@+id/autorization"
+        android:id="@+id/registration_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -64,7 +64,7 @@
         app:layout_constraintVertical_bias="0.144" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/password_main"
         android:layout_width="290dp"
         android:layout_height="48dp"
         android:layout_marginStart="60dp"
@@ -84,12 +84,13 @@
         app:layout_constraintVertical_bias="0.381" />
 
     <TextView
-        android:id="@+id/no_password"
+        android:id="@+id/no_password_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginBottom="300dp"
         android:text="Если у Вас нет аккаунта, зарегистрируйтесь"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,7 +100,7 @@
         app:layout_constraintVertical_bias="0.011" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/button_autorizaton"
+        android:id="@+id/button_autorizaton_main"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginStart="60dp"
@@ -109,7 +110,7 @@
         android:ems="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password">
+        app:layout_constraintTop_toBottomOf="@+id/password_main">
 
         <TextView
             android:layout_width="match_parent"
@@ -117,7 +118,7 @@
             android:gravity="center"
             android:text="Войти"
             android:textSize="20sp"
-            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="16dp">
 
         </TextView>
