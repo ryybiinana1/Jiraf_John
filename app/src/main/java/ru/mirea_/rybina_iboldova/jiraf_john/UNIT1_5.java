@@ -2,6 +2,7 @@ package ru.mirea_.rybina_iboldova.jiraf_john;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.content.ActivityNotFoundException;
@@ -10,8 +11,10 @@ import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.speech.RecognitionListener;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -29,16 +32,18 @@ public class UNIT1_5 extends AppCompatActivity {
     private boolean permissionToRecordAccepted = false;
     private String [] permissions = {Manifest.permission.RECORD_AUDIO};
 
-    private TextView recognizedTextView;
+    private EditText recognizedTextView;
     private SpeechRecognizer speechRecognizer;
     private Intent speechRecognizerIntent;
+    private TextView textView3_unit1_1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit1_5);
 
-        recognizedTextView = findViewById(R.id.textview_unit1_5);
+        recognizedTextView = findViewById(R.id.editText_unit1_5);
+        textView3_unit1_1 =findViewById(R.id.textView3_unit1_1);
 
         ImageButton startButton = findViewById(R.id.image_start);
         startButton.setOnClickListener(new View.OnClickListener() {
@@ -90,7 +95,9 @@ public class UNIT1_5 extends AppCompatActivity {
             @Override
             public void onEvent(int eventType, Bundle params) {}
         });
+
     }
+
 
     private void startSpeechToText() {
         try {
@@ -121,6 +128,7 @@ public class UNIT1_5 extends AppCompatActivity {
                 recognizedTextView.setText(matches.get(0));
             }
         }
+        checkFields();
     }
 
     @Override
@@ -130,5 +138,17 @@ public class UNIT1_5 extends AppCompatActivity {
         if (!permissionToRecordAccepted) {
             finish();
         }
+    }
+
+   private void checkFields() {
+        String value1 = recognizedTextView.getText().toString();
+        String value2 = textView3_unit1_1.getText().toString();
+
+        if (value1.equals(value2)) {
+            Toast.makeText(UNIT1_5.this, "Correct!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(UNIT1_5.this, "Incorrect!", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }

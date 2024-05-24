@@ -62,22 +62,6 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button6_unit1_1"
-        android:layout_width="287dp"
-        android:layout_height="49dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="104dp"
-        android:backgroundTint="#DFD9D9"
-        android:text="Нажмите для записи"
-        android:textColor="#8E8B8B"
-        android:textSize="19sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3_unit1_1"
-        tools:ignore="MissingConstraints" />
-
-    <Button
         android:id="@+id/button2_unit1_1"
         android:layout_width="281dp"
         android:layout_height="45dp"
@@ -105,37 +89,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/play" />
 
-    <ImageButton
-        android:id="@+id/image_stop"
-        android:layout_width="65dp"
-        android:layout_height="69dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/stop"
-        tools:layout_editor_absoluteX="302dp"
-        tools:layout_editor_absoluteY="331dp" />
-
     <EditText
         android:id="@+id/editText_unit1_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="176dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="488dp" />
-
-    <TextView
-        android:id="@+id/textview_unit1_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/button2_unit1_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_unit1_5"
-        app:layout_constraintVertical_bias="0.166" />
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
