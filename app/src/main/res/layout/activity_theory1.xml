@@ -17,63 +17,69 @@
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Нажми меня"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#ffd700"
+            android:text="Theory according to Unit 1"
+            android:textColor="#4C4C4C"
+            android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/Let_start_i"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Привет, мир!"
-            app:layout_constraintTop_toBottomOf="@id/button_i"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"/>
-
+            android:layout_marginTop="5dp"
+            android:text="Relationship between people"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/people"
-            app:layout_constraintTop_toBottomOf="@id/Let_start_i"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="7dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/people" />
 
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/imageView"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="235dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/long_text"/>
+                android:text="  I’ve read an interesting proverb today, A good friend is like a four–leaf clover, hard to find and lucky to have. I wondered “What is friendship in fact?” So let’s find out! Friendship is a special kind of relationships between people. People need it because they expect help and comfort from each other. Those who have friends have less stress
+            and live longer. But, only time can show \n
+    Friendship is usually based on common interests and mutual
+            understanding, true encouragement and sympathy. Usually people meet, get acquainted,
+            communicate and as a result become friends \n
+        I have many good friends, but two of them are the best. Their names are Annie and Natalie. They make my life brighter and more interesting. When I’m bored, I can always call my them and ask to come over and have a party. Once a month we go to the cinema or to the theatre, we call it “trinity time”. I consider them to be a part of my family.
+" />
 
         </ScrollView>
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:layout_width="277dp"
             android:layout_height="wrap_content"
-            android:text="Нажми меня"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"/>
-
-
-
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#9C9C9C"
+            android:text="Let's go"
+            android:textColor="#4C4C4C"
+            android:layout_gravity="center" />
 
 
     </LinearLayout>

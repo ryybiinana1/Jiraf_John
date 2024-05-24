@@ -25,10 +25,10 @@ public class MainMenu extends AppCompatActivity {
         });
 
         // Найдем кнопку по ее id
-        Button button2 = findViewById(R.id.button2);
+        Button button1 = findViewById(R.id.button1);
 
         // Установим обработчик нажатия на кнопку
-        button2.setOnClickListener(new View.OnClickListener() {
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Создаем Intent для перехода на Activity Theory1
