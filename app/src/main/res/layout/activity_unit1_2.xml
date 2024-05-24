@@ -15,13 +15,7 @@
         tools:layout_editor_absoluteY="1dp"
         tools:ignore="MissingConstraints">
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent"
-            android:src="@drawable/obratno_strelka" />
+
 
         <Button
             android:id="@+id/button1"

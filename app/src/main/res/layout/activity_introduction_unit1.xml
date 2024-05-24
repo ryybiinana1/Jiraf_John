@@ -8,6 +8,14 @@
     android:backgroundTint="#FAF9F9"
     tools:context=".Introduction_UNIT1">
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:src="@drawable/obratno_strelka" />
+
     <TextView
         android:id="@+id/Let_start_i"
         android:layout_width="wrap_content"
