@@ -13,7 +13,6 @@ public class Introduction_UNIT1 extends AppCompatActivity {
 
     private Button Button_i;
     private TextView Let_start;
-
     private Intent intent;
     private TextView Unit1;
     @SuppressLint("MissingInflatedId")
