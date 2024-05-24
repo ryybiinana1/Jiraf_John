@@ -26,7 +26,15 @@ public class MainActivity1 extends AppCompatActivity {
         Password = findViewById(R.id.password);
         Button_autorizaton = findViewById(R.id.button_autorizaton);
 
-       No_password.setOnClickListener(new View.OnClickListener() {
+        Button_autorizaton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Здесь код, который будет выполнен при клике на No_password
+                intent = new Intent(MainActivity1.this, MainMenu.class);
+                startActivity(intent);
+            }
+        });
+        No_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Здесь код, который будет выполнен при клике на No_password

@@ -1,5 +1,6 @@
 package ru.mirea_.rybina_iboldova.jiraf_john;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +13,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainMenu extends AppCompatActivity {
+    private Button Button1;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +28,10 @@ public class MainMenu extends AppCompatActivity {
         });
 
         // Найдем кнопку по ее id
-        Button button1 = findViewById(R.id.button1);
+        Button1 = findViewById(R.id.MainMenu_button1);
 
         // Установим обработчик нажатия на кнопку
-        button1.setOnClickListener(new View.OnClickListener() {
+        Button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Создаем Intent для перехода на Activity Theory1

@@ -31,7 +31,7 @@ public class Introduction_UNIT1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Здесь код, который будет выполнен при клике на No_password
-                intent = new Intent(Introduction_UNIT1.this, UNIT1.class);
+                intent = new Intent(Introduction_UNIT1.this, UNIT1_1.class);
                 startActivity(intent);
             }
         });
