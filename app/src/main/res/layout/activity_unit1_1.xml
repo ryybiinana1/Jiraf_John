@@ -21,18 +21,17 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button2_unit1_1"
         android:layout_width="281dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="72dp"
         android:backgroundTint="#9C9C9C"
         android:text="К следующему вопросу"
         android:textColor="#4C4C4C"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -122,4 +121,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3_unit1_1"
         tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

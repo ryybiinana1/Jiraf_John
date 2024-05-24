@@ -3,6 +3,7 @@ package ru.mirea_.rybina_iboldova.jiraf_john;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -13,8 +14,9 @@ import android.widget.Toast;
 public class UNIT1_1 extends AppCompatActivity {
 
     private TextView textView3_unit1_1;
-    private Button button5_unit1_1, button6_unit1_1, button7_unit1_1;
+    private Button button5_unit1_1, button6_unit1_1, button7_unit1_1, button2_unit1_1;
     private String correctAnswer = "are2";
+    private Intent intent;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -26,8 +28,17 @@ public class UNIT1_1 extends AppCompatActivity {
         button5_unit1_1 = findViewById(R.id.button5_unit1_1);
         button6_unit1_1 = findViewById(R.id.button6_unit1_1);
         button7_unit1_1 = findViewById(R.id.button7_unit1_1);
+        button2_unit1_1 = findViewById(R.id.button2_unit1_1);
 
         setAnswerButtonListeners();
+        button2_unit1_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Здесь код, который будет выполнен при клике на button4_unit1_1
+                intent = new Intent(UNIT1_1.this, UNIT1_22.class);
+                startActivity(intent);
+            }
+        });
     }
     private void setAnswerButtonListeners() {
         View.OnClickListener answerButtonClickListener = new View.OnClickListener() {
@@ -51,6 +62,7 @@ public class UNIT1_1 extends AppCompatActivity {
         button6_unit1_1.setOnClickListener(answerButtonClickListener);
         button7_unit1_1.setOnClickListener(answerButtonClickListener);
     }
+
 
     private void disableAnswerButtons() {
         button5_unit1_1.setEnabled(false);

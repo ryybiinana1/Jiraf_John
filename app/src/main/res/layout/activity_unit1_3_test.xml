@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UNIT1_3_test">
+
+    <View
+        android:id="@+id/drawing_area_test"
+        android:layout_width="398dp"
+        android:layout_height="267dp"
+        android:layout_below="@id/question_text_test"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="422dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"/>
+
+
+    <TextView
+        android:id="@+id/question_text_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Соотнесите ответы:"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/left_column_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/question_text_test"
+        android:layout_alignParentStart="true"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/item_1_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Item 1"
+            android:textColor="#9C9C9C"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/item_2_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item 2"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/item_3_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item 3"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right_column_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/question_text_test"
+        android:layout_alignParentEnd="true"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/answer_1_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Answer A"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/answer_2_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Answer B"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/answer_3_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Answer C"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button2_unit1_3_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="104dp"
+        android:layout_marginEnd="217dp"
+        android:layout_marginBottom="337dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button_unit1_3_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="195dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="171dp"
+        android:text="Button" />
+
+</RelativeLayout>
