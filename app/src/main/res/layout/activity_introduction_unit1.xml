@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBFBFB"
+    android:backgroundTint="#FAF9F9"
+    tools:context=".Introduction_UNIT1">
+
+    <TextView
+        android:id="@+id/Let_start_i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="Let's start!"
+        app:layout_constraintBottom_toTopOf="@+id/button_i"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+        android:id="@+id/UNIT1_practice_i"
+        android:layout_width="249dp"
+        android:layout_height="158dp"
+        android:layout_marginBottom="40dp"
+        android:text="Practice according to UNIT 1"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_i"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_i"
+        android:layout_width="257dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="316dp"
+        android:backgroundTint="#9C9C9C"
+        android:text="Start"
+        android:textColor="#4C4C4C"
+        android:textColorHighlight="#4C4C4C"
+        android:textColorLink="#4C4C4C"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
