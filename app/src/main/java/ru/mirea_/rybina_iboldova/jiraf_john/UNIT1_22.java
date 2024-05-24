@@ -32,7 +32,7 @@ public class UNIT1_22 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Здесь код, который будет выполнен при клике на No_password
-                intent = new Intent(UNIT1_22.this, UNIT1_3_test.class);
+                intent = new Intent(UNIT1_22.this, UNIT1_5.class);
                 startActivity(intent);
             }
         });
