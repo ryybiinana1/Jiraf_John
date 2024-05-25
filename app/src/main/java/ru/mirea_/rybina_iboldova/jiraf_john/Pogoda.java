@@ -1,6 +1,9 @@
 package ru.mirea_.rybina_iboldova.jiraf_john;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +22,7 @@ import ru.mirea_.rybina_iboldova.jiraf_john.databinding.ActivityMainBinding;
 public class Pogoda extends AppCompatActivity {
     private ActivityMainBinding binding;
     private MapView mapView;
+    private Button button_von_carti;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,17 @@ public class Pogoda extends AppCompatActivity {
                 new CameraPosition(new Point(55.751574, 37.573856), 11.0f, 0.0f, 0.0f),
                 new Animation(Animation.Type.SMOOTH, 0),
                 null);
+
+
+        button_von_carti = findViewById(R.id.button_von_carti);
+        button_von_carti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Здесь код, который будет выполнен при клике на button4_unit1_1
+                Intent intent  = new Intent(Pogoda.this, MainMenu.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

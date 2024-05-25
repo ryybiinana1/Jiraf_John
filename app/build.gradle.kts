@@ -36,7 +36,7 @@ android {
 
 dependencies {
     implementation ("com.yandex.android:maps.mobile:4.3.1-full")
-    //implementation ("com.squareup.sqlite:sqlite:2.2.0")
+    implementation ("org.xerial:sqlite-jdbc:3.36.0.3")
     //яндекс
     //implementation("com.yandex.android:maps.mobile:4.3.1-full")
     implementation ("org.xerial:sqlite-jdbc:3.36.0.3")
