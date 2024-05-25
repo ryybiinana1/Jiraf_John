@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Good">
+
+    <Button
+        android:id="@+id/UNIT_youregood"
+        android:layout_width="392dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#ffd700"
+        android:text="You did it! And now to the next unit!"
+        android:textColor="#4C4C4C"
+        android:textSize="37sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/UNIT_your_balli"
+        android:layout_width="41dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="44dp"
+        android:text="бал"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_go_to_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UNIT_youregood"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/UNIT_vsego_balli"
+        android:layout_width="41dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="44dp"
+        android:text="/5"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toEndOf="@+id/UNIT_your_balli"
+        app:layout_constraintTop_toBottomOf="@+id/UNIT_youregood" />
+
+
+    <Button
+        android:id="@+id/button_go_to_menu"
+        android:layout_width="257dp"
+        android:layout_height="51dp"
+
+        android:layout_marginBottom="136dp"
+        android:backgroundTint="#9C9C9C"
+        android:text="Menu"
+        android:textColor="#4C4C4C"
+        android:textColorHighlight="#4C4C4C"
+        android:textColorLink="#4C4C4C"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
