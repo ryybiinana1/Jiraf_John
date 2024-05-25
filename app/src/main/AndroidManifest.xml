@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -14,13 +15,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".App"
         android:theme="@style/Theme.Jiraf_John"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity
-            android:name=".MainMenu"
-            android:exported="false" />
         <activity
             android:name=".Good_3"
             android:exported="false" />
@@ -29,6 +26,9 @@
             android:exported="false" />
         <activity
             android:name=".Good_2"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT3_25"
             android:exported="false" />
         <activity
             android:name=".UNIT3_24"
@@ -112,11 +112,9 @@
             android:name=".Introduction_UNIT1"
             android:exported="false" />
         <activity
-            android:name=".MainActivity1"
-            android:exported="false" />
-        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
+
         <activity
             android:name=".Theory1"
             android:exported="false" />
@@ -124,7 +122,10 @@
             android:name=".Unit14"
             android:exported="false" />
         <activity
-            android:name=".Pogoda"
+            android:name=".MainMenu"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

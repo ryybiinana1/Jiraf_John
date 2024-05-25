@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import org.sqlite.SQLiteConnection;
 
 public class MainActivity1 extends AppCompatActivity {
     private TextView No_password;
@@ -26,7 +29,7 @@ public class MainActivity1 extends AppCompatActivity {
         Password = findViewById(R.id.password_main);
         Button_autorizaton = findViewById(R.id.button_autorizaton_main);
 
-        InternalStorage storage = new InternalStorage();
+        InternalStorage storage = new InternalStorage(this);
 
         Button_autorizaton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +37,7 @@ public class MainActivity1 extends AppCompatActivity {
 
                 String username = User_name.getText().toString();
                 String password = Password.getText().toString();
-                storage.createUser(username, password);
+//                storage.createUser(username, password);
                 boolean isLoggedIn = storage.loginUser(username, password);
                 if (isLoggedIn) {
                     System.out.println("Login successful!");
@@ -42,6 +45,9 @@ public class MainActivity1 extends AppCompatActivity {
                     startActivity(intent);
                 } else {
                     System.out.println("Invalid username or password.");
+                    Toast.makeText(MainActivity1.this, "Invalid username or password.", Toast.LENGTH_LONG).show();
+                    User_name.clearComposingText();
+                    Password.clearComposingText();
                 }
             }
         });

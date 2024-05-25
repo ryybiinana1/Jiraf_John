@@ -42,6 +42,8 @@ public class UNIT1_5 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit1_5);
 
+
+
         recognizedTextView = findViewById(R.id.editText_unit1_5);
         textView3_unit1_1 =findViewById(R.id.textView3_unit1_1);
 
