@@ -26,7 +26,7 @@
         android:id="@+id/UNIT_your_balli"
         android:layout_width="41dp"
         android:layout_height="42dp"
-        android:layout_marginStart="168dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="44dp"
         android:text="бал"
         android:textSize="24sp"
@@ -34,7 +34,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button_go_to_menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/UNIT_youregood"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.005" />
 
     <TextView
         android:id="@+id/UNIT_vsego_balli"
@@ -45,9 +45,17 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintHorizontal_bias="0.207"
         app:layout_constraintStart_toEndOf="@+id/UNIT_your_balli"
         app:layout_constraintTop_toBottomOf="@+id/UNIT_youregood" />
+
+    <TextView
+        android:id="@+id/textView3_good"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="314dp" />
 
 
     <Button
