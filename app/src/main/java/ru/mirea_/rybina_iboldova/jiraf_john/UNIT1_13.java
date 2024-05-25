@@ -18,6 +18,8 @@ public class UNIT1_13 extends AppCompatActivity {
     private String correctAnswer = "are";
     private Intent intent;
 
+    private boolean IsAnswered = false;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +36,14 @@ public class UNIT1_13 extends AppCompatActivity {
         button2_unit1_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Здесь код, который будет выполнен при клике на button4_unit1_1
-                intent = new Intent(UNIT1_13.this, UNIT1_14.class);
-                startActivity(intent);
+                if (IsAnswered) {
+                    // Здесь код, который будет выполнен при клике на button4_unit1_1
+                    intent = new Intent(UNIT1_13.this, UNIT1_14.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(UNIT1_13.this, "Need answer!", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }
@@ -53,7 +60,7 @@ public class UNIT1_13 extends AppCompatActivity {
                 } else {
                     clickedButton.setBackgroundColor(Color.rgb(61, 61, 61));
                 }
-
+                IsAnswered = true;
                 disableAnswerButtons();
             }
         };

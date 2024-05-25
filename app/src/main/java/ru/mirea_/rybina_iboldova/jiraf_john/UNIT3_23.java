@@ -19,6 +19,7 @@ public class UNIT3_23 extends AppCompatActivity {
     private Button button2_unit1_22, button_answer_u1_2;
     private Intent intent;
     private TextView editText_unit1_22;
+    private boolean IsAnswered = false;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -45,15 +46,20 @@ public class UNIT3_23 extends AppCompatActivity {
                 } else {
                     Toast.makeText(UNIT3_23.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                 }
+                IsAnswered = true;
             }
         });
 
         button2_unit1_22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (IsAnswered) {
                 // Здесь код, который будет выполнен при клике на button4_unit1_1
                 intent = new Intent(UNIT3_23.this, UNIT3_24.class);
-                startActivity(intent);
+                startActivity(intent);}
+                else {
+                    Toast.makeText(UNIT3_23.this, "Need answer!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
