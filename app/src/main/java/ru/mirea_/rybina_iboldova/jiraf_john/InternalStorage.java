@@ -1,109 +1,97 @@
 package ru.mirea_.rybina_iboldova.jiraf_john;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 
-public class InternalStorage {
+public class InternalStorage extends SQLiteOpenHelper {
 
-    private static final String USERS_FILE_NAME = "users.dat";
-    private static final String UNIT_FILE_NAME = "unit.dat";
-    private static final int REQUIRED_ANSWERS_COUNT = 0;
+    private static final String DATABASE_NAME = "storage.db";
+    private static final int DATABASE_VERSION = 1;
 
-    private final Map<String, String> users;
-    private final Map<Integer, Integer> unitAnswers;
+    private static final String TABLE_USERS = "users";
+    private static final String TABLE_UNIT_ANSWERS = "unit_answers";
 
-    public InternalStorage() {
-        users = loadUsers();
-        unitAnswers = loadUnitAnswers();
-        createFilesIfNotExist();
+    private static final String COLUMN_USER_ID = "user_id";
+    private static final String COLUMN_LOGIN = "login";
+    private static final String COLUMN_PASSWORD = "password";
+
+    private static final String COLUMN_ANSWER_ID = "answer_id";
+    private static final String COLUMN_UNIT_NUMBER = "unit_number";
+    private static final String COLUMN_USER_ID_FK = "user_id_fk";
+    private static final int REQUIRED_ANSWERS_COUNT = 1;
+    private Context context;
+
+    public InternalStorage(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        this.context = context;
     }
 
-    // Метод для загрузки пользователей из файла
-    private Map<String, String> loadUsers() {
-        Map<String, String> loadedUsers = new HashMap<>();
-        try (ObjectInputStream ois = new ObjectInputStream(Files.newInputStream(Paths.get(USERS_FILE_NAME)))) {
-            loadedUsers = (Map<String, String>) ois.readObject();
-        } catch (IOException | ClassNotFoundException e) {
-            // Если файл не найден или возникла ошибка при чтении, возвращаем пустой список
-            System.err.println("Failed to load users: " + e.getMessage());
-        }
-        return loadedUsers;
-    }
-    private void createFilesIfNotExist() {
-        File usersFile = new File(USERS_FILE_NAME);
-        File unitFile = new File(UNIT_FILE_NAME);
-        try {
-            if (!usersFile.exists()) {
-                usersFile.createNewFile();
-                System.out.println("Created users file: " + USERS_FILE_NAME);
-            }
-            if (!unitFile.exists()) {
-                unitFile.createNewFile();
-                System.out.println("Created unit file: " + UNIT_FILE_NAME);
-            }
-        } catch (IOException e) {
-            System.err.println("Failed to create files: " + e.getMessage());
-        }
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        String createUserTableQuery = "CREATE TABLE " + TABLE_USERS + " (" +
+                COLUMN_USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                COLUMN_LOGIN + " TEXT," +
+                COLUMN_PASSWORD + " TEXT)";
+        db.execSQL(createUserTableQuery);
+
+        String createUnitAnswersTableQuery = "CREATE TABLE " + TABLE_UNIT_ANSWERS + " (" +
+                COLUMN_ANSWER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                COLUMN_UNIT_NUMBER + " INTEGER," +
+                COLUMN_USER_ID_FK + " INTEGER," +
+                "FOREIGN KEY(" + COLUMN_USER_ID_FK + ") REFERENCES " + TABLE_USERS + "(" + COLUMN_USER_ID + "))";
+        db.execSQL(createUnitAnswersTableQuery);
     }
 
-    // Метод для загрузки ответов unit из файла
-    private Map<Integer, Integer> loadUnitAnswers() {
-        Map<Integer, Integer> loadedUnitAnswers = new HashMap<>();
-        try (ObjectInputStream ois = new ObjectInputStream(Files.newInputStream(Paths.get(UNIT_FILE_NAME)))) {
-            loadedUnitAnswers = (Map<Integer, Integer>) ois.readObject();
-        } catch (IOException | ClassNotFoundException e) {
-            // Если файл не найден или возникла ошибка при чтении, возвращаем пустой список
-            System.err.println("Failed to load unit answers: " + e.getMessage());
-        }
-        return loadedUnitAnswers;
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_UNIT_ANSWERS);
+        onCreate(db);
     }
 
-    // Метод для сохранения пользователей в файл
-    private void saveUsers() {
-        try (ObjectOutputStream oos = new ObjectOutputStream(Files.newOutputStream(Paths.get(USERS_FILE_NAME)))) {
-            oos.writeObject(users);
-        } catch (IOException e) {
-            System.err.println("Failed to save users: " + e.getMessage());
-        }
-    }
-
-    // Метод для сохранения ответов unit в файл
-    private void saveUnitAnswers() {
-        try (ObjectOutputStream oos = new ObjectOutputStream(Files.newOutputStream(Paths.get(UNIT_FILE_NAME)))) {
-            oos.writeObject(unitAnswers);
-        } catch (IOException e) {
-            System.err.println("Failed to save unit answers: " + e.getMessage());
-        }
-    }
-
-    // Метод для создания пользователя
     public void createUser(String login, String password) {
-        users.put(login, password);
-        saveUsers();
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_LOGIN, login);
+        values.put(COLUMN_PASSWORD, password);
+        db.insert(TABLE_USERS, null, values);
+        db.close();
     }
 
-    // Метод для входа пользователя
     public boolean loginUser(String login, String password) {
-        return users.containsKey(login) && Objects.equals(users.get(login), password);
+        String selectQuery = "SELECT * FROM " + TABLE_USERS + " WHERE " +
+                COLUMN_LOGIN + " = '" + login + "' AND " +
+                COLUMN_PASSWORD + " = '" + password + "'";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        boolean result = cursor.moveToFirst();
+        cursor.close();
+        db.close();
+        return result;
     }
 
-    // Метод для добавления ответа в unit
     public void addAnswerToUnit(int unitNumber, int userId) {
-        unitAnswers.put(unitNumber * 1000 + userId, unitAnswers.getOrDefault(unitNumber * 1000 + userId, 0) + 1);
-        saveUnitAnswers();
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_UNIT_NUMBER, unitNumber);
+        values.put(COLUMN_USER_ID_FK, userId);
+        db.insert(TABLE_UNIT_ANSWERS, null, values);
+        db.close();
     }
 
-    // Метод для проверки прохождения unit
     public boolean checkUnitCompletion(int unitNumber, int userId) {
-        return unitAnswers.getOrDefault(unitNumber * 1000 + userId, 0) >= REQUIRED_ANSWERS_COUNT;
+        String selectQuery = "SELECT COUNT(*) FROM " + TABLE_UNIT_ANSWERS + " WHERE " +
+                COLUMN_UNIT_NUMBER + " = " + unitNumber + " AND " +
+                COLUMN_USER_ID_FK + " = " + userId;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        cursor.moveToFirst();
+        int count = cursor.getInt(0);
+        cursor.close();
+        db.close();
+        return count >= REQUIRED_ANSWERS_COUNT;
     }
 }
