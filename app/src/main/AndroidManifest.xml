@@ -112,11 +112,9 @@
             android:name=".Introduction_UNIT1"
             android:exported="false" />
         <activity
-            android:name=".MainActivity1"
-            android:exported="false" />
-        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
+
         <activity
             android:name=".Theory1"
             android:exported="false" />
@@ -125,6 +123,9 @@
             android:exported="false" />
         <activity
             android:name=".MainMenu"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

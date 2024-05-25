@@ -36,7 +36,7 @@ android {
 
 dependencies {
     implementation ("org.xerial:sqlite-jdbc:3.34.0")
-    implementation ("org.postgresql:postgresql:42.2.20")
+    implementation ("org.postgresql:postgresql:42.7.3")
     implementation ("org.mindrot:jbcrypt:0.4")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.12.0")
