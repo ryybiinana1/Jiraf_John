@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Theory1">
+
+    <ImageButton
+        android:id="@+id/imageButton_theory1"
+        android:layout_width="24dp"
+        android:layout_height="30dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/obratno_strelka"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#ffd700"
+        android:text="Theory according to Unit 1"
+        android:textColor="#4C4C4C"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relationship between people"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="400dp"
+        android:layout_height="261dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/people" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="393dp"
+        android:layout_height="253dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Настоящее время Simple (Present Simple) используется для выражения регулярных действий, фактов и общих истин.\n
+\n
+Форма:\n
+\n
+Утверждения:\n
+\n
+I/You/We/They + V (глагол в основной форме без изменений)\n
+He/She/It + V-s/-es (для третьего лица единственного числа)\n
+Вопросы:\n
+\n
+Do/Does + подлежащее + V?\n
+Отрицания:\n
+\n
+I/You/We/They + do not (don't) + V\n
+He/She/It + does not (doesn't) + V\n
+Примеры:\n
+\n
+Утверждения:\n
+\n
+I play tennis. (Я играю в теннис.)\n
+She reads books every day. (Она читает книги каждый день.)\n
+Вопросы:\n
+\n
+Do you speak English? (Ты говоришь по-английски?)\n
+Does he like coffee? (Он любит кофе?)\n
+Отрицания:\n
+\n
+We don't watch TV in the morning. (Мы не смотрим телевизор утром.)\n
+He doesn't eat meat. (Он не ест мясо.)\n
+Важно помнить:\n
+\n
+Present Simple употребляется для описания регулярных действий, обычно не связанных с настоящим моментом времени.\n
+Часто используется с наречиями времени, такими как always (всегда), usually (обычно), often (часто), sometimes (иногда), never (никогда) и т. д.\n
+Для действий, происходящих в момент речи или в настоящий момент времени, используйте Present Continuous.\n
+"/>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button2_theory1"
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#9C9C9C"
+        android:text="Let's go"
+        android:textColor="#4C4C4C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

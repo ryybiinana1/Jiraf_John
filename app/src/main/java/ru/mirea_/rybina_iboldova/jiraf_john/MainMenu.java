@@ -28,6 +28,7 @@ public class MainMenu extends AppCompatActivity {
         // Найдем кнопку по ее id
         Button button1 = findViewById(R.id.MainMenu_button1);
         Button MainMenu_button2 = findViewById(R.id.MainMenu_button2);
+        Button MainMenu_button3 = findViewById(R.id.MainMenu_button3);
         MainMenu_button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +45,15 @@ public class MainMenu extends AppCompatActivity {
             public void onClick(View v) {
                 // Создаем Intent для перехода на Activity Theory1
                 Intent intent = new Intent(MainMenu.this, Theory1.class);
+                // Запускаем Activity Theory1
+                startActivity(intent);
+            }
+        });
+        MainMenu_button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Создаем Intent для перехода на Activity Theory1
+                Intent intent = new Intent(MainMenu.this, Theory3.class);
                 // Запускаем Activity Theory1
                 startActivity(intent);
             }

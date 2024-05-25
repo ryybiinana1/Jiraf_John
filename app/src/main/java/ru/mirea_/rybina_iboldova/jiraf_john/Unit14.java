@@ -24,7 +24,7 @@ public class Unit14 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit1_41);
 
-        mPlayer = MediaPlayer.create(this, R.raw.steve); // Замените R.raw.beautiful_woman на ваш файл аудио
+        mPlayer = MediaPlayer.create(this, R.raw.steve2); // Замените R.raw.beautiful_woman на ваш файл аудио
         mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {

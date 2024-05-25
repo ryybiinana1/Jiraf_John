@@ -15,7 +15,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class UNIT2_21 extends AppCompatActivity {
+public class UNIT3_21 extends AppCompatActivity {
     private Button button2_unit1_22, button_answer_u1_2;
     private Intent intent;
     private TextView editText_unit1_22;
@@ -25,7 +25,7 @@ public class UNIT2_21 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_unit2_21);
+        setContentView(R.layout.activity_unit3_21);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -40,10 +40,10 @@ public class UNIT2_21 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String answer = editText_unit1_22.getText().toString().trim();
-                if (answer.equals("Ben is working today")) {
-                    Toast.makeText(UNIT2_21.this, "Correct!", Toast.LENGTH_SHORT).show();
+                if (answer.equals("open")) {
+                    Toast.makeText(UNIT3_21.this, "Correct!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(UNIT2_21.this, "Incorrect!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UNIT3_21.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -52,7 +52,7 @@ public class UNIT2_21 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Здесь код, который будет выполнен при клике на button4_unit1_1
-                intent = new Intent(UNIT2_21.this, UNIT2_22.class);
+                intent = new Intent(UNIT3_21.this, UNIT3_22.class);
                 startActivity(intent);
             }
         });
