@@ -15,7 +15,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class UNIT1_22 extends AppCompatActivity {
+public class UNIT1_2_example extends AppCompatActivity {
     private Button button2_unit1_22, button_answer_u1_2;
     private Intent intent;
     private TextView editText_unit1_22;
@@ -25,7 +25,7 @@ public class UNIT1_22 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_unit1_22);
+        setContentView(R.layout.activity_unit1_2_example);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -41,9 +41,9 @@ public class UNIT1_22 extends AppCompatActivity {
             public void onClick(View v) {
                 String answer = editText_unit1_22.getText().toString().trim();
                 if (answer.equals("are")) {
-                    Toast.makeText(UNIT1_22.this, "Correct!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UNIT1_2_example.this, "Correct!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(UNIT1_22.this, "Incorrect!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UNIT1_2_example.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -52,7 +52,7 @@ public class UNIT1_22 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Здесь код, который будет выполнен при клике на button4_unit1_1
-                intent = new Intent(UNIT1_22.this, Unit14.class);
+                intent = new Intent(UNIT1_2_example.this, Unit14.class);
                 startActivity(intent);
             }
         });

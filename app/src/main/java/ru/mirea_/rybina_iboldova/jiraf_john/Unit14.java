@@ -1,6 +1,8 @@
 package ru.mirea_.rybina_iboldova.jiraf_john;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -11,15 +13,18 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Unit14 extends AppCompatActivity {
 
     private MediaPlayer mPlayer;
-    private Button playButton, pauseButton, stopButton;
+    private Button playButton, pauseButton, stopButton, button_first_answer, button_second_answer;
+    private Button button_next_to5;
+    private Intent intent;
+    private String correctAnswer = "Steve is ill. He is in bed";
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_unit14);
+        setContentView(R.layout.activity_unit1_41);
 
-        mPlayer = MediaPlayer.create(this, R.raw.beautiful_woman); // Замените R.raw.beautiful_woman на ваш файл аудио
+        mPlayer = MediaPlayer.create(this, R.raw.steve); // Замените R.raw.beautiful_woman на ваш файл аудио
         mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
@@ -33,6 +38,47 @@ public class Unit14 extends AppCompatActivity {
 
         pauseButton.setEnabled(false);
         stopButton.setEnabled(false);
+
+        button_next_to5 = findViewById(R.id.button_next_to5);
+        button_next_to5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Здесь код, который будет выполнен при клике на No_password
+                intent = new Intent(Unit14.this, UNIT1_5.class);
+                startActivity(intent);
+            }
+        });
+
+        button_first_answer = findViewById(R.id.button_first_answer);
+        button_second_answer = findViewById(R.id.button_second_answer);
+        setAnswerButtonListeners();
+    }
+    private void setAnswerButtonListeners() {
+        View.OnClickListener answerButtonClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Button clickedButton = (Button) view;
+                String answerText = clickedButton.getText().toString();
+
+                if (answerText.equals(correctAnswer)) {
+                    clickedButton.setBackgroundColor(Color.rgb(255, 215, 0));
+                    Toast.makeText(Unit14.this, "Right!", Toast.LENGTH_SHORT).show();
+                } else {
+                    clickedButton.setBackgroundColor(Color.rgb(61, 61, 61));
+                }
+
+                disableAnswerButtons();
+            }
+        };
+
+        button_first_answer.setOnClickListener(answerButtonClickListener);
+        button_second_answer.setOnClickListener(answerButtonClickListener);
+    }
+
+
+    private void disableAnswerButtons() {
+        button_first_answer.setEnabled(false);
+        button_second_answer.setEnabled(false);
     }
 
     private void stopPlay() {

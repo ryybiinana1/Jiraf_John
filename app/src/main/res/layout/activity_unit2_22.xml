@@ -41,7 +41,7 @@
         android:layout_width="304dp"
         android:layout_height="34dp"
         android:layout_marginTop="84dp"
-        android:text="Заполни пропуски"
+        android:text="Запиши предложение"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,13 +52,14 @@
 
     <TextView
         android:id="@+id/textView3_unit1_1"
-        android:layout_width="297dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="60dp"
-        android:text="Where _ you at that day?"
+        android:layout_width="352dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="56dp"
+        android:text="(what / the children / are / doing)"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.728"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="MissingConstraints" />
