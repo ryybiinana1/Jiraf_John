@@ -41,7 +41,10 @@ public class UNIT3_22 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String answer = editText_unit1_22.getText().toString().trim();
-                if (answer.equals("closes")|| answer.equals("Closes")) {
+                if (answer.equals("closes")|| answer.equals("Closes"))
+                {
+                    GlobalState globalState = GlobalState.getInstance();
+                    globalState.addMyAnswers();
                     Toast.makeText(UNIT3_22.this, "Correct!", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(UNIT3_22.this, "Incorrect!", Toast.LENGTH_SHORT).show();

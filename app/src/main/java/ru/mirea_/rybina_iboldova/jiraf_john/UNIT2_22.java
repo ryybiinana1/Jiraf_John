@@ -42,6 +42,8 @@ public class UNIT2_22 extends AppCompatActivity {
             public void onClick(View v) {
                 String answer = editText_unit1_22.getText().toString().trim();
                 if (answer.equals("What are the children doing?")) {
+                    GlobalState globalState = GlobalState.getInstance();
+                    globalState.addMyAnswers();
                     Toast.makeText(UNIT2_22.this, "Correct!", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(UNIT2_22.this, "Incorrect!", Toast.LENGTH_SHORT).show();
@@ -56,8 +58,6 @@ public class UNIT2_22 extends AppCompatActivity {
                 if (IsAnswered) {
                 // Здесь код, который будет выполнен при клике на button4_unit1_1
                 intent = new Intent(UNIT2_22.this, UNIT2_51.class);
-                    GlobalState globalState = GlobalState.getInstance();
-                    globalState.addMyAnswers();
                 startActivity(intent);}
                 else {
                     Toast.makeText(UNIT2_22.this, "Need answer!", Toast.LENGTH_SHORT).show();

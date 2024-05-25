@@ -42,6 +42,8 @@ public class UNIT3_23 extends AppCompatActivity {
             public void onClick(View v) {
                 String answer = editText_unit1_22.getText().toString().trim();
                 if (answer.equals("I never go to the cinema")|| answer.equals("i never go to the cinema") || answer.equals("I never go to the cinema.") ||answer.equals("i never go to the cinema."))  {
+                    GlobalState globalState = GlobalState.getInstance();
+                    globalState.addMyAnswers();
                     Toast.makeText(UNIT3_23.this, "Correct!", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(UNIT3_23.this, "Incorrect!", Toast.LENGTH_SHORT).show();

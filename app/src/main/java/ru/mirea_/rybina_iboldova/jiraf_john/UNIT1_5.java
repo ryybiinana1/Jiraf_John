@@ -158,6 +158,8 @@ public class UNIT1_5 extends AppCompatActivity {
         String value1 = recognizedTextView.getText().toString();
         String value2 = textView3_unit1_1.getText().toString();
         if (value1.equals(value2)) {
+            GlobalState globalState = GlobalState.getInstance();
+            globalState.addMyAnswers();
             Toast.makeText(UNIT1_5.this, "Correct!", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(UNIT1_5.this, "Incorrect!", Toast.LENGTH_SHORT).show();
