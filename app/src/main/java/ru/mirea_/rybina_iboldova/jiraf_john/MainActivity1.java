@@ -1,13 +1,13 @@
 package ru.mirea_.rybina_iboldova.jiraf_john;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import org.sqlite.SQLiteConnection;
 
 public class MainActivity1 extends AppCompatActivity {
     private TextView No_password;
@@ -15,6 +15,7 @@ public class MainActivity1 extends AppCompatActivity {
     private TextView User_name;
     private TextView Password;
     private ConstraintLayout Button_autorizaton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,18 +27,31 @@ public class MainActivity1 extends AppCompatActivity {
         Password = findViewById(R.id.password_main);
         Button_autorizaton = findViewById(R.id.button_autorizaton_main);
 
-//        Button_autorizaton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Здесь код, который будет выполнен при клике на No_password
-//                intent = new Intent(MainActivity1.this, MainMenu.class);
-//                startActivity(intent);
-//            }
-//        });
+        InternalStorage storage = new InternalStorage();
+
+        Button_autorizaton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String username = User_name.getText().toString();
+                String password = Password.getText().toString();
+                storage.createUser(username, password);
+                boolean isLoggedIn = storage.loginUser(username, password);
+                if (isLoggedIn) {
+                    System.out.println("Login successful!");
+                    intent = new Intent(MainActivity1.this, MainMenu.class);
+                    startActivity(intent);
+                } else {
+                    System.out.println("Invalid username or password.");
+                }
+            }
+        });
+
         No_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Здесь код, который будет выполнен при клике на No_password
+                // Здесь код, который будет выполнен при клике на ссылку "No_password"
+                // Например, переход на активность регистрации
                 intent = new Intent(MainActivity1.this, SignUpActivity.class);
                 startActivity(intent);
             }
