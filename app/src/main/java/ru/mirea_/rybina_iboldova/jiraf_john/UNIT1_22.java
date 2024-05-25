@@ -54,6 +54,8 @@ public class UNIT1_22 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (IsAnswered) {
+                    GlobalState globalState = GlobalState.getInstance();
+                    globalState.addMyAnswers();
                 // Здесь код, который будет выполнен при клике на button4_unit1_1
                 intent = new Intent(UNIT1_22.this, Unit14.class);
                 startActivity(intent);

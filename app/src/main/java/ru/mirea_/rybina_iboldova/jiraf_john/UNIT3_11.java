@@ -42,6 +42,8 @@ public class UNIT3_11 extends AppCompatActivity {
                 if (IsAnswered) {
                 // Здесь код, который будет выполнен при клике на button4_unit1_1
                 intent = new Intent(UNIT3_11.this, UNIT3_21.class);
+                GlobalState globalState = GlobalState.getInstance();
+                globalState.addMyAnswers();
                 startActivity(intent);}
                 else {
                     Toast.makeText(UNIT3_11.this, "Need answer!", Toast.LENGTH_SHORT).show();

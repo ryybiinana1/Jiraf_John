@@ -46,6 +46,8 @@ public class Unit14 extends AppCompatActivity {
             public void onClick(View v) {
                 if (IsAnswered) {
                     // Здесь код, который будет выполнен при клике на No_password
+                    GlobalState globalState = GlobalState.getInstance();
+                    globalState.addMyAnswers();
                     intent = new Intent(Unit14.this, UNIT1_5.class);
                     startActivity(intent);
                 }else{
