@@ -31,7 +31,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,13 +46,14 @@
                         android:id="@+id/MainMenu_button4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="124dp"
                         android:layout_marginTop="44dp"
                         android:backgroundTint="#FFD700"
                         android:contentDescription="Button for Unit 2 Section 1"
                         android:text="4"
                         android:textColor="#4C4C4C"
                         android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.389"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/MainMenu_button3" />
 
@@ -60,27 +61,29 @@
                         android:id="@+id/MainMenu_button5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:layout_marginEnd="72dp"
+                        android:layout_marginTop="12dp"
                         android:backgroundTint="#FFD700"
                         android:contentDescription="Button for Unit 2 Section 1"
                         android:text="5"
                         android:textColor="#4C4C4C"
                         android:textSize="24sp"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.741"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/MainMenu_button4" />
 
                     <Button
                         android:id="@+id/MainMenu_button6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="124dp"
-                        android:layout_marginTop="28dp"
+                        android:layout_marginTop="24dp"
                         android:backgroundTint="#FFD700"
                         android:contentDescription="Button for Unit 2 Section 1"
                         android:text="6"
                         android:textColor="#4C4C4C"
                         android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.595"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/MainMenu_button5" />
 
@@ -88,13 +91,14 @@
                         android:id="@+id/MainMenu_button7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="52dp"
-                        android:layout_marginTop="28dp"
+                        android:layout_marginTop="20dp"
                         android:backgroundTint="#FFD700"
                         android:contentDescription="Button for Unit 2 Section 1"
                         android:text="7"
                         android:textColor="#4C4C4C"
                         android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.32"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/MainMenu_button6" />
 
@@ -102,13 +106,14 @@
                         android:id="@+id/MainMenu_button3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="52dp"
-                        android:layout_marginTop="24dp"
+                        android:layout_marginTop="20dp"
                         android:backgroundTint="#FFD700"
                         android:contentDescription="Button for Unit 1 Section 5"
                         android:text="3"
                         android:textColor="#000000"
                         android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.161"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/MainMenu_button2" />
 
@@ -116,54 +121,59 @@
                         android:id="@+id/MainMenu_button2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="28dp"
-                        android:layout_marginEnd="128dp"
+                        android:layout_marginTop="8dp"
                         android:backgroundTint="#FFD700"
                         android:contentDescription="Button for Unit 1 Section 5"
                         android:text="2"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.498"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/MainMenu_button1" />
 
                     <Button
                         android:id="@+id/MainMenu_button1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="40dp"
+                        android:layout_marginTop="16dp"
                         android:backgroundTint="#FFD700"
                         android:contentDescription="Button for Unit 1 Section 1"
                         android:text="1"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         app:layout_constraintEnd_toEndOf="parent"
-                        tools:layout_editor_absoluteY="38dp" />
+                        app:layout_constraintHorizontal_bias="0.813"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
                         android:id="@+id/MainMenu_button9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginEnd="60dp"
+                        android:layout_marginTop="16dp"
                         android:backgroundTint="#FFD700"
                         android:contentDescription="Button for Unit 1 Section 1"
                         android:text="x"
                         android:textColor="#000000"
                         android:textSize="24sp"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.32"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/MainMenu_button8" />
 
                     <Button
                         android:id="@+id/MainMenu_button8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="124dp"
-                        android:layout_marginTop="44dp"
+                        android:layout_marginTop="24dp"
                         android:backgroundTint="#FFD700"
                         android:contentDescription="Button for Unit 1 Section 1"
                         android:text="x"
                         android:textColor="#000000"
                         android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.115"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/MainMenu_button7" />
 
