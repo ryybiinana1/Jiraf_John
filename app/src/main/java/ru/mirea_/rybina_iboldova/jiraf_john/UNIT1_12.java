@@ -17,6 +17,7 @@ public class UNIT1_12 extends AppCompatActivity {
     private Button button5_unit1_1, button6_unit1_1, button7_unit1_1, button2_unit1_1;
     private String correctAnswer = "am";
     private Intent intent;
+    private boolean IsAnswered = false;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -34,9 +35,14 @@ public class UNIT1_12 extends AppCompatActivity {
         button2_unit1_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Здесь код, который будет выполнен при клике на button4_unit1_1
-                intent = new Intent(UNIT1_12.this, UNIT1_13.class);
-                startActivity(intent);
+                if (IsAnswered) {
+                    // Здесь код, который будет выполнен при клике на button4_unit1_1
+                    intent = new Intent(UNIT1_12.this, UNIT1_13.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(UNIT1_12.this, "Need answer!", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }
@@ -53,7 +59,7 @@ public class UNIT1_12 extends AppCompatActivity {
                 } else {
                     clickedButton.setBackgroundColor(Color.rgb(61, 61, 61));
                 }
-
+                IsAnswered = true;
                 disableAnswerButtons();
             }
         };

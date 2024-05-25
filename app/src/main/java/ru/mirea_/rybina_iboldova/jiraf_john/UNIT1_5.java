@@ -35,6 +35,7 @@ public class UNIT1_5 extends AppCompatActivity {
     private TextView textView3_unit1_1;
     private Button button2_unit1_15;
     private Intent intent;
+    private boolean IsAnswered = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +58,10 @@ public class UNIT1_5 extends AppCompatActivity {
             public void onClick(View v) {
                 // Здесь код, который будет выполнен при клике на button4_unit1_1
                 intent = new Intent(UNIT1_5.this, Good.class);
-                startActivity(intent);
-            }
+                startActivity(intent);}
+                /*else{
+                    Toast.makeText(UNIT1_5.this, "Need answer!", Toast.LENGTH_SHORT).show();
+                }*/
         });
 
         // Запрос разрешений
@@ -136,6 +139,7 @@ public class UNIT1_5 extends AppCompatActivity {
                 recognizedTextView.setText(matches.get(0));
             }
         }
+
         checkFields();
     }
 
@@ -151,7 +155,6 @@ public class UNIT1_5 extends AppCompatActivity {
    private void checkFields() {
         String value1 = recognizedTextView.getText().toString();
         String value2 = textView3_unit1_1.getText().toString();
-
         if (value1.equals(value2)) {
             Toast.makeText(UNIT1_5.this, "Correct!", Toast.LENGTH_SHORT).show();
         } else {
