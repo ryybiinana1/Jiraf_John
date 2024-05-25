@@ -1,10 +1,16 @@
 package ru.mirea_.rybina_iboldova.jiraf_john;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Range;
+
+import org.postgresql.core.Tuple;
+
+import java.util.Map;
 
 public class InternalStorage extends SQLiteOpenHelper {
 
@@ -23,6 +29,8 @@ public class InternalStorage extends SQLiteOpenHelper {
     private static final String COLUMN_USER_ID_FK = "user_id_fk";
     private static final int REQUIRED_ANSWERS_COUNT = 1;
     private Context context;
+
+    GlobalState globalState = GlobalState.getInstance();
 
     public InternalStorage(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -67,25 +75,31 @@ public class InternalStorage extends SQLiteOpenHelper {
                 COLUMN_PASSWORD + " = '" + password + "'";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
+        cursor.getColumnName(0);
         boolean result = cursor.moveToFirst();
+        int columnValue = Integer.parseInt(cursor.getString(0));
         cursor.close();
+        GlobalState globalState = GlobalState.getInstance();
+        globalState.setUserId(columnValue);
         db.close();
         return result;
     }
 
-    public void addAnswerToUnit(int unitNumber, int userId) {
+
+
+    public void addAnswerToUnit(int unitNumber) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_UNIT_NUMBER, unitNumber);
-        values.put(COLUMN_USER_ID_FK, userId);
+        values.put(COLUMN_USER_ID_FK, globalState.userId);
         db.insert(TABLE_UNIT_ANSWERS, null, values);
         db.close();
     }
 
-    public boolean checkUnitCompletion(int unitNumber, int userId) {
+    public boolean checkUnitCompletion(int unitNumber) {
         String selectQuery = "SELECT COUNT(*) FROM " + TABLE_UNIT_ANSWERS + " WHERE " +
                 COLUMN_UNIT_NUMBER + " = " + unitNumber + " AND " +
-                COLUMN_USER_ID_FK + " = " + userId;
+                COLUMN_USER_ID_FK + " = " + globalState.userId;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
         cursor.moveToFirst();

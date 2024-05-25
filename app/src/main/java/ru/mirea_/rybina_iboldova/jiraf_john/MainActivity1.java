@@ -40,6 +40,7 @@ public class MainActivity1 extends AppCompatActivity {
 //                storage.createUser(username, password);
                 boolean isLoggedIn = storage.loginUser(username, password);
                 if (isLoggedIn) {
+
                     System.out.println("Login successful!");
                     intent = new Intent(MainActivity1.this, MainMenu.class);
                     startActivity(intent);

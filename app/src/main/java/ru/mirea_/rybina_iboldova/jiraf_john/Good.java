@@ -27,10 +27,17 @@ public class Good extends AppCompatActivity {
         });
         button_go_to_menu = findViewById(R.id.button_go_to_menu);
 
+        InternalStorage storage = new InternalStorage(this);
         button_go_to_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Здесь код, который будет выполнен при клике на button4_unit1_1
+
+                GlobalState globalState = GlobalState.getInstance();
+
+                if (globalState.maxAnswers == globalState.myAnswers){
+                    storage.addAnswerToUnit(1);
+                }
+                globalState.myAnswers = 0;
                 intent = new Intent(Good.this, MainMenu.class);
                 startActivity(intent);
             }

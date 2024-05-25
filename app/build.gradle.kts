@@ -39,6 +39,7 @@ dependencies {
     //implementation ("com.squareup.sqlite:sqlite:2.2.0")
     //яндекс
     //implementation("com.yandex.android:maps.mobile:4.3.1-full")
+    implementation ("org.xerial:sqlite-jdbc:3.36.0.3")
     implementation ("org.postgresql:postgresql:42.2.20")
     implementation ("org.mindrot:jbcrypt:0.4")
     implementation("androidx.appcompat:appcompat:1.6.1")

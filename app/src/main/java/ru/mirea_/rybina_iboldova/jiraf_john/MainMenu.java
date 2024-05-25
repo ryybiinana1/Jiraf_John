@@ -2,6 +2,7 @@ package ru.mirea_.rybina_iboldova.jiraf_john;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +29,9 @@ public class MainMenu extends AppCompatActivity {
         Button button1 = findViewById(R.id.MainMenu_button1);
         Button MainMenu_button2 = findViewById(R.id.MainMenu_button2);
         Button MainMenu_button3 = findViewById(R.id.MainMenu_button3);
+
+        InternalStorage storage = new InternalStorage(this);
+
         MainMenu_button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +45,23 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-        // Установим обработчик нажатия на кнопку
+
+
+        if (storage.checkUnitCompletion(1)) {
+            button1.setBackgroundColor(Color.GREEN);
+        } else {
+            button1.setBackgroundColor(Color.RED);
+        }
+        if (storage.checkUnitCompletion(2)) {
+            MainMenu_button2.setBackgroundColor(Color.GREEN);
+        } else {
+            MainMenu_button2.setBackgroundColor(Color.RED);
+        }
+        if (storage.checkUnitCompletion(3)) {
+            MainMenu_button3.setBackgroundColor(Color.GREEN);
+        } else {
+            MainMenu_button3.setBackgroundColor(Color.RED);
+        }
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

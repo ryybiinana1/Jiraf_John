@@ -2,13 +2,17 @@ package ru.mirea_.rybina_iboldova.jiraf_john;
 
 public class GlobalState {
     private static GlobalState instance;
-    private int myAnswers;
-    private int maxAnswers;
+    public int myAnswers;
+    public int maxAnswers;
+
+    public int userId;
 
     private GlobalState() {
         // Private constructor to prevent instantiation
     }
-
+    public void setUserId(int user) {
+        this.userId = user;
+    }
     public static synchronized GlobalState getInstance() {
         if (instance == null) {
             instance = new GlobalState();

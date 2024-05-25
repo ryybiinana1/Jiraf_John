@@ -31,6 +31,10 @@ public class UNIT3_11 extends AppCompatActivity {
         button7_unit1_1 = findViewById(R.id.button7_unit1_1);
         button2_unit1_1 = findViewById(R.id.button2_unit1_15);
 
+        GlobalState globalState = GlobalState.getInstance();
+        globalState.maxAnswers = 4;
+        globalState.myAnswers = 0;
+
         setAnswerButtonListeners();
         button2_unit1_1.setOnClickListener(new View.OnClickListener() {
             @Override
