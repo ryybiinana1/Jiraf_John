@@ -39,10 +39,10 @@
 
     <TextView
         android:id="@+id/UNIT1_practice_i"
-        android:layout_width="287dp"
+        android:layout_width="320dp"
         android:layout_height="219dp"
         android:layout_marginBottom="72dp"
-        android:text="Practice according to UNIT 1 'Глагол To be' "
+        android:text="Practice according to UNIT 1 'Present Continious' "
         android:textSize="42sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button_i"

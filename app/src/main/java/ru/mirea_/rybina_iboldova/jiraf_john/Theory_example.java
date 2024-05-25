@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,41 +13,43 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainMenu extends AppCompatActivity {
+public class Theory_example extends AppCompatActivity {
+    private Button Button_2;
+    private ImageButton Button_theory1;
+    private Intent intent;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_theory_example);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Button_2 = findViewById(R.id.button2_theory1);
+        Button_theory1 = findViewById(R.id.imageButton_theory1);
 
-        // Найдем кнопку по ее id
-        Button button1 = findViewById(R.id.MainMenu_button1);
-        Button MainMenu_button2 = findViewById(R.id.MainMenu_button2);
-        MainMenu_button2.setOnClickListener(new View.OnClickListener() {
+        Button_theory1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Создаем Intent для перехода на Activity Theory1
-                Intent intent = new Intent(MainMenu.this, Theory2.class);
-                // Запускаем Activity Theory1
+                // Здесь код, который будет выполнен при клике на No_password
+                intent = new Intent(Theory_example.this, MainMenu.class);
                 startActivity(intent);
             }
         });
 
-        // Установим обработчик нажатия на кнопку
-        button1.setOnClickListener(new View.OnClickListener() {
+
+        Button_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Создаем Intent для перехода на Activity Theory1
-                Intent intent = new Intent(MainMenu.this, Theory1.class);
-                // Запускаем Activity Theory1
+                // Здесь код, который будет выполнен при клике на No_password
+                intent = new Intent(Theory_example.this, Introduction_UNIT1.class);
                 startActivity(intent);
             }
         });
+
     }
 }

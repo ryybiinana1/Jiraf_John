@@ -39,10 +39,10 @@
 
     <TextView
         android:id="@+id/UNIT1_practice_i"
-        android:layout_width="287dp"
-        android:layout_height="219dp"
-        android:layout_marginBottom="72dp"
-        android:text="Practice according to UNIT 1 'Глагол To be' "
+        android:layout_width="249dp"
+        android:layout_height="158dp"
+        android:layout_marginBottom="40dp"
+        android:text="Practice according to UNIT 1"
         android:textSize="42sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button_i"
@@ -53,7 +53,7 @@
         android:id="@+id/button_i"
         android:layout_width="257dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="316dp"
         android:backgroundTint="#9C9C9C"
         android:text="Start"
         android:textColor="#4C4C4C"

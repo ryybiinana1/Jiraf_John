@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Introduction_UNIT1 extends AppCompatActivity {
+public class Introduction_2 extends AppCompatActivity {
 
     private Button Button_i;
     private TextView Let_start;
@@ -19,7 +19,7 @@ public class Introduction_UNIT1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_introduction_unit1);
+        setContentView(R.layout.activity_introduction_2);
 
         Button_i = findViewById(R.id.button_i);
         Let_start = findViewById(R.id.Let_start_i);
@@ -30,7 +30,7 @@ public class Introduction_UNIT1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Здесь код, который будет выполнен при клике на No_password
-                intent = new Intent(Introduction_UNIT1.this, UNIT1_11.class);
+                intent = new Intent(Introduction_2.this, UNIT2_11.class);
                 startActivity(intent);
             }
         });

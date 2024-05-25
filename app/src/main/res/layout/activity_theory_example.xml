@@ -70,45 +70,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Значение глагола to be — “быть, находиться”. В отличие от других английских глаголов, глагол to be спрягается (т.е. изменяется по лицам и числам).\n
-
-am, is, are в Present Simple (Настоящем времени)\n
-am - используется со мной (I).\n
-is - используется с он, она, оно (he, she, it), а также с единственным числом (singular) и неопределенным местоимением (someone, something).\n
-are - используется с мы (we), вы (you), они (they), а также с множественным числом (plural).\n
-Формат предложений:\n
-Утвердительные:\n
-\n
-I am (я есть)\n
-He/She/It is (он/она/оно есть)\n
-We/You/They are (мы/вы/они есть)\n
-Отрицательные:\n
-\n
-I am not (я не есть)\n
-He/She/It is not (он/она/оно не есть) или сокращенно isn't\n
-We/You/They are not (мы/вы/они не есть) или сокращенно aren't\n
-Вопросительные:\n
-\n
-Am I...? (я есть?)\n
-Is he/she/it...? (он/она/оно есть?)\n
-Are we/you/they...? (мы/вы/они есть?)\n
-Примеры:\n
-Утвердительные предложения:\n
-\n
-I am a student. (Я студент.)\n
-She is a doctor. (Она доктор.)\n
-They are students. (Они студенты.)\n
-Отрицательные предложения:\n
-\n
-I am not a teacher. (Я не учитель.)\n
-She isn't at home. (Она не дома.)\n
-They aren't from England. (Они не из Англии.)\n
-Вопросительные предложения:\n
-\n
-Am I late? (Я опоздал?)\n
-Is she your friend? (Она твоя подруга?)\n
-Are they coming to the party? (Они идут на вечеринку?)\n
-"/>
+            android:text="  I’ve read an interesting proverb today, A good friend is like a four–leaf clover, hard to find and lucky to have. I wondered “What is friendship in fact?” So let’s find out! Friendship is a special kind of relationships between people. People need it because they expect help and comfort from each other. Those who have friends have less stress
+        and live longer. But, only time can show \n
+Friendship is usually based on common interests and mutual
+        understanding, true encouragement and sympathy. Usually people meet, get acquainted,
+        communicate and as a result become friends \n
+    I have many good friends, but two of them are the best. Their names are Annie and Natalie. They make my life brighter and more interesting. When I’m bored, I can always call my them and ask to come over and have a party. Once a month we go to the cinema or to the theatre, we call it “trinity time”. I consider them to be a part of my family.
+" />
 
     </ScrollView>
 

@@ -70,44 +70,40 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Значение глагола to be — “быть, находиться”. В отличие от других английских глаголов, глагол to be спрягается (т.е. изменяется по лицам и числам).\n
-
-am, is, are в Present Simple (Настоящем времени)\n
-am - используется со мной (I).\n
-is - используется с он, она, оно (he, she, it), а также с единственным числом (singular) и неопределенным местоимением (someone, something).\n
-are - используется с мы (we), вы (you), они (they), а также с множественным числом (plural).\n
-Формат предложений:\n
-Утвердительные:\n
+            android:text=" Настоящее время Continuous (Present Continuous) используется для описания действий, которые происходят в момент речи, в настоящий момент времени или в данный период времени.\n
 \n
-I am (я есть)\n
-He/She/It is (он/она/оно есть)\n
-We/You/They are (мы/вы/они есть)\n
-Отрицательные:\n
+Форма:\n
 \n
-I am not (я не есть)\n
-He/She/It is not (он/она/оно не есть) или сокращенно isn't\n
-We/You/They are not (мы/вы/они не есть) или сокращенно aren't\n
-Вопросительные:\n
+Утверждения:\n
 \n
-Am I...? (я есть?)\n
-Is he/she/it...? (он/она/оно есть?)\n
-Are we/you/they...? (мы/вы/они есть?)\n
+I/You/We/They + am/are + V-ing (глагол с окончанием -ing)\n
+He/She/It + is + V-ing\n
+Вопросы:\n
+\n
+Am/Is/Are + подлежащее + V-ing?\n
+Отрицания:\n
+\n
+I/You/We/They + am/are + not + V-ing\n
+He/She/It + is + not + V-ing\n
 Примеры:\n
-Утвердительные предложения:\n
 \n
-I am a student. (Я студент.)\n
-She is a doctor. (Она доктор.)\n
-They are students. (Они студенты.)\n
-Отрицательные предложения:\n
+Утверждения:\n
 \n
-I am not a teacher. (Я не учитель.)\n
-She isn't at home. (Она не дома.)\n
-They aren't from England. (Они не из Англии.)\n
-Вопросительные предложения:\n
+I am watching TV. (Я смотрю телевизор.)\n
+She is reading a book. (Она читает книгу.)\n
+Вопросы:\n
 \n
-Am I late? (Я опоздал?)\n
-Is she your friend? (Она твоя подруга?)\n
-Are they coming to the party? (Они идут на вечеринку?)\n
+Are you listening to music? (Ты слушаешь музыку?)\n
+Is he playing football? (Он играет в футбол?)\n
+Отрицания:\n
+\n
+They are not working today. (Они не работают сегодня.)\n
+He is not studying now. (Он сейчас не учится.)\n
+Важно помнить:\n
+\n
+Present Continuous употребляется для описания временно ограниченных событий, происходящих в момент речи или в данный момент времени.\n
+Обычно используется с наречиями времени, такими как now (сейчас), at the moment (в данный момент), currently (в настоящее время) и т. д.\n
+Для длительных действий или состояний, используйте Present Simple.\n
 "/>
 
     </ScrollView>

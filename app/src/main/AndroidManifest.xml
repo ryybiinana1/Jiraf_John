@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -15,19 +19,67 @@
         android:theme="@style/Theme.Jiraf_John"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity1"
+            android:name=".UNIT2_13"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT2_12"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT2_11"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT2_51"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT2_22"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT2_21"
+            android:exported="false" />
+        <activity
+            android:name=".Introduction_2"
+            android:exported="false" />
+        <activity
+            android:name=".Theory2"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT1_2_example"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT1_15"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT1_14"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT1_13"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT1_12"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT1_1_example"
+            android:exported="false" />
+        <activity
+            android:name=".Introduction_UNIT_example"
+            android:exported="false" />
+        <activity
+            android:name=".Theory_example"
+            android:exported="false" />
+        <activity
+            android:name=".UNIT1_5"
             android:exported="false" />
         <activity
             android:name=".UNIT1_22"
             android:exported="false" />
         <activity
-            android:name=".UNIT1_1"
+            android:name=".UNIT1_11"
             android:exported="false" />
         <activity
             android:name=".Introduction_UNIT1"
             android:exported="false" />
         <activity
-            android:name=".MainMenu"
+            android:name=".MainActivity1"
             android:exported="false" />
         <activity
             android:name=".SignUpActivity"
@@ -36,7 +88,10 @@
             android:name=".Theory1"
             android:exported="false" />
         <activity
-            android:name=".UNIT1_5"
+            android:name=".Unit14"
+            android:exported="false" />
+        <activity
+            android:name=".MainMenu"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
