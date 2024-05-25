@@ -26,6 +26,7 @@ public class MainMenu extends AppCompatActivity {
         });
 
         // Найдем кнопку по ее id
+        Button map = findViewById(R.id.bbb_carta);
         Button button1 = findViewById(R.id.MainMenu_button1);
         Button MainMenu_button2 = findViewById(R.id.MainMenu_button2);
         Button MainMenu_button3 = findViewById(R.id.MainMenu_button3);
@@ -44,7 +45,18 @@ public class MainMenu extends AppCompatActivity {
                 globalState.setGlobalVariables(7);
             }
         });
+        map.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // Создаем Intent для перехода на Activity Theory1
+                Intent intent = new Intent(MainMenu.this, Pogoda.class);
+                // Запускаем Activity Theory1
+                startActivity(intent);
 
+                GlobalState globalState = GlobalState.getInstance();
+                globalState.setGlobalVariables(7);
+            }
+        });
 
 
         if (storage.checkUnitCompletion(1)) {

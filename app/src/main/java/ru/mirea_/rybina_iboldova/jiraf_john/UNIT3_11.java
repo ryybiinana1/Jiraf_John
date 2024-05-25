@@ -32,7 +32,7 @@ public class UNIT3_11 extends AppCompatActivity {
         button2_unit1_1 = findViewById(R.id.button2_unit1_15);
 
         GlobalState globalState = GlobalState.getInstance();
-        globalState.maxAnswers = 4;
+        globalState.maxAnswers = 5;
         globalState.myAnswers = 0;
 
         setAnswerButtonListeners();

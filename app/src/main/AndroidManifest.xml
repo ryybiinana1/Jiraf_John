@@ -19,7 +19,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity1"
+            android:name=".MainMenu"
             android:exported="false" />
         <activity
             android:name=".Good_3"
@@ -122,7 +122,7 @@
             android:name=".Pogoda"
             android:exported="false" />
         <activity
-            android:name=".MainMenu"
+            android:name=".MainActivity1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
