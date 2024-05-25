@@ -19,7 +19,6 @@ public class UNIT2_13 extends AppCompatActivity {
     private Intent intent;
     private boolean IsAnswered = false;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
