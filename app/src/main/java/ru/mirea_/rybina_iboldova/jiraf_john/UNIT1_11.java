@@ -20,6 +20,8 @@ public class UNIT1_11 extends AppCompatActivity {
     private boolean IsAnswered = false;
     private Intent intent;
 
+    InternalStorage storage = new InternalStorage(this);
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {

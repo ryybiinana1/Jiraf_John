@@ -13,7 +13,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainMenu extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +35,9 @@ public class MainMenu extends AppCompatActivity {
                 Intent intent = new Intent(MainMenu.this, Theory2.class);
                 // Запускаем Activity Theory1
                 startActivity(intent);
+
+                GlobalState globalState = GlobalState.getInstance();
+                globalState.setGlobalVariables(7);
             }
         });
 

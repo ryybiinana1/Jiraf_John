@@ -54,6 +54,8 @@ public class UNIT2_11 extends AppCompatActivity {
 
                 if (answerText.equals(correctAnswer)) {
                     clickedButton.setBackgroundColor(Color.rgb(255, 215, 0));
+                    GlobalState globalState = GlobalState.getInstance();
+                    globalState.addMyAnswers();
                     Toast.makeText(UNIT2_11.this, "Right!", Toast.LENGTH_SHORT).show();
                 } else {
                     clickedButton.setBackgroundColor(Color.rgb(61, 61, 61));
