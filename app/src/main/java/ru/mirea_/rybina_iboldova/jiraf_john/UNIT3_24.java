@@ -52,7 +52,7 @@ public class UNIT3_24 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Здесь код, который будет выполнен при клике на button4_unit1_1
-                intent = new Intent(UNIT3_24.this, MainMenu.class);
+                intent = new Intent(UNIT3_24.this, Good_3.class);
                 startActivity(intent);
             }
         });

@@ -19,6 +19,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Good_3"
+            android:exported="false" />
+        <activity
+            android:name=".Good"
+            android:exported="false" />
+        <activity
+            android:name=".Good_2"
+            android:exported="false" />
+        <activity
             android:name=".UNIT3_25"
             android:exported="false" />
         <activity

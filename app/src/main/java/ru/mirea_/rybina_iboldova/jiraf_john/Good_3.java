@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Good extends AppCompatActivity {
+public class Good_3 extends AppCompatActivity {
     private Button button_go_to_menu;
     private Intent intent;
 
@@ -31,7 +31,7 @@ public class Good extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Здесь код, который будет выполнен при клике на button4_unit1_1
-                intent = new Intent(Good.this, MainMenu.class);
+                intent = new Intent(Good_3.this, MainMenu.class);
                 startActivity(intent);
             }
         });

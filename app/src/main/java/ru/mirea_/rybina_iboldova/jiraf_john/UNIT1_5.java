@@ -2,8 +2,6 @@ package ru.mirea_.rybina_iboldova.jiraf_john;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -11,16 +9,15 @@ import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.speech.RecognitionListener;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -36,6 +33,8 @@ public class UNIT1_5 extends AppCompatActivity {
     private SpeechRecognizer speechRecognizer;
     private Intent speechRecognizerIntent;
     private TextView textView3_unit1_1;
+    private Button button2_unit1_15;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +45,19 @@ public class UNIT1_5 extends AppCompatActivity {
         textView3_unit1_1 =findViewById(R.id.textView3_unit1_1);
 
         ImageButton startButton = findViewById(R.id.image_start);
+        button2_unit1_15 = findViewById(R.id.button2_unit1_15);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startSpeechToText();
+            }
+        });
+        button2_unit1_15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Здесь код, который будет выполнен при клике на button4_unit1_1
+                intent = new Intent(UNIT1_5.this, Good.class);
+                startActivity(intent);
             }
         });
 
