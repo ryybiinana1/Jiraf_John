@@ -34,7 +34,7 @@ public class UNIT2_11 extends AppCompatActivity {
         setAnswerButtonListeners();
 
         GlobalState globalState = GlobalState.getInstance();
-        globalState.maxAnswers = 6;
+        globalState.maxAnswers = 5;
         globalState.myAnswers = 0;
         button2_unit1_1.setOnClickListener(new View.OnClickListener() {
             @Override
